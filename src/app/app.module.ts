@@ -11,12 +11,15 @@ import { LoginComponent } from './login/login.component';
 import { HometownComponent } from './hometown/hometown.component';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { FooterComponent } from './footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     LoginComponent,
-    HometownComponent
+    HometownComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
