@@ -1,0 +1,17 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="5" (mapClick)="setHometown($event)">
+  <agm-marker *ngFor="let marker of markers$ | async" [latitude]="marker.lat" [longitude]="marker.lng">
+    <agm-info-window><img src="{{ marker.photoUrl }}">{{ marker.label }}</agm-info-window>
+  </agm-marker>
+</agm-map>
+<div class="sidebar">
+  <div class="floating-box">
+    <h1>Hometowns</h1>
+    <p><small>Demo by AK</small></p>
+    <p>
+      <span *ngIf="userService.afAuth.user | async as user; else showLogin">{{ user.displayName }} • <a href (click)="userService.logout()">Log out</a> • </span>
+      <ng-template #showLogin><a href routerLink="/login" routerLinkActive="active">Login to add your hometown</a> • </ng-template>
+      <a href routerLink="/hometown" routerLinkActive="active">My hometown</a>
+    </p>
+  </div>
+  <router-outlet></router-outlet>
+</div>

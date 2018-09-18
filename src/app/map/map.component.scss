@@ -1,0 +1,42 @@
+agm-map {
+  width: 100vw;
+  height: 100vh;
+}
+.agm-info-window-content {
+  text-align: center;
+  img {
+    display: block;
+    margin: auto;
+    width: 60px;
+    border-radius: 50%;
+  }
+}
+.sidebar {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  .floating-box {
+    margin: 20px;
+    padding: 15px;
+    width: 400px;
+    background: ivory;
+    box-shadow: -6px 6px rgba(0,0,0,.2);
+    text-align: center;
+    button {
+      font-size: 1.2em;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .sidebar {
+    width: 100%;
+    .floating-box {
+      padding: 10px;
+      margin: 0 0 6px 0;
+      width: 100%;
+      box-shadow: 0 6px rgba(0,0,0,.2);
+      box-sizing: border-box;
+    }
+  }
+}

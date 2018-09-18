@@ -1,0 +1,8 @@
+
+<div class="floating-box">
+  <h4>My hometown coordinates</h4>
+  <p *ngIf="userMarker$ | async as marker; else showChoose">lat: {{ marker.lat }}<br>lng: {{ marker.lng }}</p>
+  <ng-template #showChoose>
+    <p>Click your hometown on the map!</p>
+  </ng-template>
+</div>
